@@ -5,7 +5,7 @@ int main(){
     int vector[QTDE] = {12, 6, 8, 10, 9, 11};
     int min, aux;
 
-    for (int i = 0; i < QTDE; i++){
+    for (int i = 0; i < QTDE - 1; i++){
         min = i;
         for(int j = i+1; j < QTDE; j++){
             if (vector[j] < vector[min]){
