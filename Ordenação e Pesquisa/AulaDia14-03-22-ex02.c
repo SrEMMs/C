@@ -3,7 +3,7 @@
 
 int main(){
     char palavra[QTDE] = "SISTEMASINF";
-    int min, aux;
+    char min, aux;
 
     for (int i = 0; i < QTDE - 1; i++){
         min = i;
