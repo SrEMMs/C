@@ -9,7 +9,7 @@ int main(void){
   struct tm *utcTime;
    currentTime= time(NULL);
    /* Converte a hora atual para UTC. o ano só é representado por dois caracteres e só temos precisão de minutos.*/
-/*Gmtime é responsável por converter*/
+   /*Gmtime é responsável por converter*/
    utcTime= gmtime(&currentTime);
    /* Imprime os fuso-horarios do Brasil e China. */
 printf("Brazil: %02d:%02d:%02d\n",(utcTime->tm_hour+BRAZIL)%24*-3,utcTime->tm_min, utcTime->tm_sec);
