@@ -20,6 +20,7 @@ int main(){
     inicio = time(NULL);
     printf("Informe seu nome: ");
     fgets(nome, 50, stdin);
+    
     while (i < 50){
         printf("%s", nome);
         i++;
