@@ -21,8 +21,14 @@ int main(){
             }
             num[j+h] = valor;
         }
+        printf("H = %d\n", h);
+        for (int i = 0; i < MAX; i++){
+        printf("%d ", num[i]);
+        }
+        printf("\n");
     } while (h > 1);
 
+    printf("Resultado final da ordenacao:\n");
     for (int i = 0; i < MAX; i++){
         printf("%d ", num[i]);
     }
