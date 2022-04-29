@@ -1,11 +1,14 @@
 #include<stdio.h>
-#define QTDE 6
+#include<time.h>
+#define MAX 12
 
 int main(){
-    int vet[QTDE] = {40, 38, 50, 20, 11, 18};
+    int vet[MAX] = {17, 42, 9, 33, 12, 54, 65, 23, 54, 76, 1, 22};
     int aux, i;
+    time_t INICIO, FIM;
 
-    for(int j = 1; j < QTDE; j++){
+    INICIO = time(NULL);
+    for(int j = 1; j < MAX; j++){
         aux = vet[j];
         i = j - 1;
         while ((i >= 0) && (vet[i]>aux)){
@@ -14,10 +17,11 @@ int main(){
         }
         vet[i+1] = aux;
     }
-    for (int j = 0; j < QTDE; j++){
+    for (int j = 0; j < MAX; j++){
         printf("%d ", vet[j]);
     
     }
-    
+    FIM = time(NULL);
+    printf("\nDemorou %2.f segundos.", difftime(INICIO, FIM) * (-1));
     return 0;
 }
